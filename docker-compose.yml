@@ -9,4 +9,8 @@ services:
       NODE_ENV: development
     ports:
       - 4200:4200
-    command: npm run start
+    # command: npm run start
+    command: >
+      sh -c "cp -r ../temp/node_modules node_modules &&
+        npm run start"
+    
